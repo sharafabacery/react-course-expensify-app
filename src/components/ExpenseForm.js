@@ -62,6 +62,7 @@ const ExpenseForm=(props)=>{
                         onFocusChange={onFocusChange}
                         numberOfMonths={1}
                         isOutsideRange={()=>false}
+                       
                     />
                 <textarea placeholder="Add Note for Expense (optional)" value={note} onChange={onNoteChange}></textarea>
                 
