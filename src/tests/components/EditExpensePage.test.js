@@ -1,6 +1,6 @@
 import React from 'react'
 import{shallow} from 'enzyme'
-import moment from 'moment'
+
 import {EditPage} from '../../components/EditExpensePage'
 import expenses from '../fixtures/expeneses'
 
