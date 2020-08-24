@@ -1,10 +1,15 @@
 //rem 1rem = 16 px
+*{
+    box-sizing: border-box;
+}
 html{
     font-size: 62.5%;
 }
 body{
+    color:$dark-grey;
     font-family:  Helvetica,Arial, sans-serif;
     font-size:$m_size ;
+    line-height: 1.6;
    
 }
 h1{

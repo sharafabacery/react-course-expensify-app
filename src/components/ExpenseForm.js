@@ -50,11 +50,12 @@ const ExpenseForm=(props)=>{
             }
 
             return(
-                <div>
-                <p>{error!=='' &&error}</p>
-                <form onSubmit={onSubmit}>
-                <input type="text" placeholder='Description' autoFocus value={description} onChange={onDescriptionChange} />
-                <input type="number" placeholder='Amount' value={amount} onChange={onAmountChange}/>
+              
+                
+                <form className="form" onSubmit={onSubmit}>
+                <p className="from__err">{error!=='' &&error}</p>
+                <input className="text-input" type="text" placeholder='Description' autoFocus value={description} onChange={onDescriptionChange} />
+                <input className="text-input" type="number" placeholder='Amount' value={amount} onChange={onAmountChange}/>
                     <SingleDatePicker
                         date={createdAt}
                         onDateChange={onDateChange}
@@ -64,11 +65,13 @@ const ExpenseForm=(props)=>{
                         isOutsideRange={()=>false}
                        
                     />
-                <textarea placeholder="Add Note for Expense (optional)" value={note} onChange={onNoteChange}></textarea>
+                <textarea className="textarea"placeholder="Add Note for Expense (optional)" value={note} onChange={onNoteChange}></textarea>
+                <div>
+                <button className="button" type="submit">Add Expense</button>
                 
-                <button type="submit">Add Expense</button>
-                </form>
                 </div>
+                </form>
+           
                 )
 
 

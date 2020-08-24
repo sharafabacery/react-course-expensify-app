@@ -25,17 +25,21 @@ export const ExpenseListFilter=(props)=>{
             }
    const onTextChange=(e)=>{props.setTextFilter(e.target.value)}
    
-            return(<div>
-            <input type="text" value={props.filters.text} onChange={
+            return(
+            <div className="content-container">
+            <div className="input-group">
+            <div className="input-group__item">
+            <input className="text-input" type="text" placeholder="search expenses" value={props.filters.text} onChange={
                onTextChange
-              
-                
             }/>
-            <select value={props.filters.sortBy} onChange={onSortChange}>
+            </div>
+             <div className="input-group__item">
+             <select className="select" value={props.filters.sortBy} onChange={onSortChange}>
             <option value='date'>Date</option>
             <option value='amount'>Amount</option>
             </select>
-            <DateRangePicker
+            </div>
+             <div className="input-group__item"> <DateRangePicker
             startDate={props.filters.startDate}
             endDate={props.filters.endDate}
             onDatesChange={onDatesChange}
@@ -47,7 +51,11 @@ export const ExpenseListFilter=(props)=>{
             startDateId="start"
             endDateId="end"
             
-            />
+            /></div>
+            </div>
+            
+            
+           
             </div>)
 
 

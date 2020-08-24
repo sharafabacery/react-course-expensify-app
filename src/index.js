@@ -6,9 +6,10 @@ import configureStore from './store/configureStore'
 import {startSetExpenses}from './actions/expenses'
 import { login,logout } from "./actions/auth";
 import { firebase } from "./firebase/firebase";
-import 'react-dates/initialize';
-import './index.css';
+import LoadingPage from "./components/LoadingPage"
 import './styles/styles.scss';
+import 'react-dates/initialize';
+
 import 'react-dates/lib/css/_datepicker.css';
 
 const store=configureStore()
@@ -16,7 +17,7 @@ const store=configureStore()
 
 const jsx=(<Provider store={store}><AppRouter/></Provider>)
 //ReactDOM.render(jsx,document.getElementById('root'))
-ReactDOM.render(<p>Loading...</p>,document.getElementById('root'))
+ReactDOM.render(<LoadingPage/>,document.getElementById('root'))
 
 let hasRendered=false
 const renderApp=()=>{
